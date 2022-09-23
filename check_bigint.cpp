@@ -7,10 +7,10 @@ int main()
 {
     freopen("input.txt", "r", stdin);
     freopen("output.txt", "w", stdout);
-    BigInteger a, b, c;
-    a = "20";
-    b = "10";
+    BigInteger a, b, c = "1";
+    a = "2";
+    b = "100";
 
-    cout << a / b;
+   cout<<a.power(b);
     return 0;
 }

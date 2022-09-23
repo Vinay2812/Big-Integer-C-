@@ -255,12 +255,12 @@ protected:
         if(isEqual(n, "0"))return "1";
         if(isEqual(n, "1"))return x;
 
-        if(isEqual(modulo(x, "2"), "0")){
-            return power(multiply(x, x), divideBy2(n));
+        long long N = stoll(n);
+        string ans = "1";
+        for(long long i=1;i<=N;i++){
+            ans = multiply(ans, x);
         }
-        else{
-            return multiply(x, power(x, subtract(n, "1")));
-        }
+        return ans;
     }
 };
 
