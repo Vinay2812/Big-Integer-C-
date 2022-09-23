@@ -262,6 +262,11 @@ protected:
         }
         return ans;
     }
+
+    string gcd(string a, string b){
+        if(isEqual(b, "0"))return a;
+        return gcd(b, modulo(a, b));
+    }
 };
 
 class BigInteger : protected StringArithmeticOperations
@@ -392,6 +397,10 @@ public:
     BigInteger power(BigInteger a){
         BigInteger ans(StringArithmeticOperations::power(this->number, a.number));
         return ans;
+    }  
+    BigInteger gcd(BigInteger a){
+        return StringArithmeticOperations::gcd(this->number, a.number);
     }
-    
 };
+
+
